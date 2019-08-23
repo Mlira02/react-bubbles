@@ -6,14 +6,12 @@ const Login = () => {
   // make a post request to retrieve a token from the api
   // when you have handled the token, navigate to the BubblePage route
   const [creds, setCreds] = useState({ username: '', password: ''})
-  
+  console.log(creds)
   const handleChange = e => {
     console.log(e.target.value)
     setCreds({
-      creds: {
-        ...creds,
+      ...creds,
         [e.target.name] : e.target.value
-      }
     })
   }
   
